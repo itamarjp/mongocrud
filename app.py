@@ -1,7 +1,12 @@
 import os
-
+from dotenv import load_dotenv
 import pymongo
 from flask import Flask, redirect, render_template, request
+
+
+FLASK_SKIP_DOTENV = os.getenv('FLASK_SKIP_DOTENV', 0)
+if FLASK_SKIP_DOTENV != 0:
+    load_dotenv()
 
 MONGODB_URL = os.getenv('MONGODB_URL', 'localhost')
 
