@@ -1,0 +1,8 @@
+<!doctype html>
+<title>Hello from Flask</title>
+
+{% for x in dados %}
+<p style="color:red">Nome = {{ x["nome"] }} <a href='http://127.0.0.1:5000/apaga/{{x["nome"]}}'>remover</a></p> 
+{% endfor %}
+
+<a href='/'>Retornar</a>
